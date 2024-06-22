@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultancy Percentage Calculator</title>
+    <style>
+        body {
+            background-color: rgb(176, 147, 248);
+            text-align: center; 
+        }
+
+        form {
+            width: 600px;
+            margin: 0 auto; 
+            padding: 30px; 
+            border: 2px solid rgb(13, 6, 100);
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>CONSULTANCY CALCULATOR</h1>
+    <form method="post" action="reg.php">
+        <label>Consultancy Name:</label>
+        <input type="text" id="industryName" name="name_of_the_industry"/><br>
+        
+        <label>Nature of Consultancy:</label>
+        <input type="radio" name="nature_of_work" value="Testing" id="testing">
+        <label for="testing">Testing</label>
+        <input type="radio" name="nature_of_work" value="Training" id="training">
+        <label for="training">Training</label>
+        <input type="radio" name="nature_of_work" value="Consultancy" id="consultancy">
+        <label for="consultancy">Consultancy</label><br>
+        
+        <label>Amount:</label>
+        <input type="text" id="amount" name="amount"><br>
+        
+        <label>Number of faculty:</label>
+        <input type="number" id="facultyCount" name="number_of_faculty" min="0" max="10" oninput="updateGST()"><br>
+        
+        <label>GST to KEC:</label>
+        <span id="gst_kec"></span><br>
+        
+        <label>GST to Faculty:</label>
+        <span id="gst_per_faculty"></span><br>
+
+        <label>Amount per Faculty:</label>
+        <span id="amount_per_faculty"></span><br>
+        
+        <input type="button" value="Calculate" onclick="calculateGST()">
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>Bill Details</h2>
+        <p>Consultancy Name: <span id="display_industry"></span></p>
+        <p>Nature of Consultancy: <span id="display_nature"></span></p>
+        <p>Amount: <span id="display_amount"></span></p>
+        <p>Number of Faculty: <span id="display_faculty"></span></p>
+        <p>GST to KEC: <span id="display_gst_kec"></span></p>
+        <p>GST to Faculty: <span id="display_gst_per_faculty"></span></p>
+        <p>Amount per Faculty: <span id="display_amount_per_faculty"></span></p>
+    </div>
+
+    <script>
+        function calculateGST() {
+            let industryName = document.getElementById("industryName").value;
+            let natureOfConsultancy = document.querySelector('input[name="nature_of_work"]:checked').value;
+            let amount = Number(document.getElementById("amount").value);
+            let facultyCount = Number(document.getElementById("facultyCount").value);
+            let calculatedAmount = (amount + (0.18 * amount)).toFixed(2); 
+            let gstToKec = 0.30 * calculatedAmount; 
+            let gstToFaculty = 0.70 * calculatedAmount; 
+            let amountPerFaculty = gstToFaculty / facultyCount; // Calculate Amount per Faculty
+            
+            document.getElementById("gst_kec").textContent = gstToKec.toFixed(2);
+            document.getElementById("gst_per_faculty").textContent = gstToFaculty.toFixed(2);
+            document.getElementById("amount_per_faculty").textContent = amountPerFaculty.toFixed(2);
+
+            document.getElementById("display_industry").textContent = industryName;
+            document.getElementById("display_nature").textContent = natureOfConsultancy;
+            document.getElementById("display_amount").textContent = calculatedAmount;
+            document.getElementById("display_faculty").textContent = facultyCount;
+            document.getElementById("display_gst_kec").textContent = gstToKec.toFixed(2);
+            document.getElementById("display_gst_per_faculty").textContent = gstToFaculty.toFixed(2);
+            document.getElementById("display_amount_per_faculty").textContent = amountPerFaculty.toFixed(2);
+            
+            document.getElementById("result").style.display = "block"; 
+        }
+
+        function updateGST() {
+            let facultyCount = Number(document.getElementById("facultyCount").value);
+            let calculatedAmount = Number(document.getElementById("amount").value) + (0.18 * Number(document.getElementById("amount").value));
+            let gstToFaculty = 0.70 * calculatedAmount; 
+            let amountPerFaculty = gstToFaculty / facultyCount; // Calculate Amount per Faculty
+            
+            document.getElementById("gst_per_faculty").textContent = gstToFaculty.toFixed(2);
+            document.getElementById("amount_per_faculty").textContent = amountPerFaculty.toFixed(2);
+        }
+    </script>
+</body>
+</html>

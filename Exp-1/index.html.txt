@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>RESUME</title>
+
+      <link rel="stylesheet" href="mystyle.css" >
+   </head>
+   <body style="background-color:skyblue;">
+      <div class="main">
+         <div class="header">
+            <h1> RESUME</h1>
+         </div>
+      </div>
+      <div class="remaining">
+         <img src="m.jpg.jpg" width="200px" height="200px">
+         <P><b><h3>NAME:SANTHAPRIYAN S</h3></b></P>
+         <P><b><h3>EMAIL:santhapriyansubramani9@gmail.com</h3></b></P>
+         <p><b><h3>PHONE NO:8438956047</h3></b></p>
+         <hr>
+         <h2 class="a">OBJECTIVES</h2>
+         <P>Hard working,goals oriented,and a team player seeking an opportunity to incorporate my skills and put them to use.</P>
+         <h2 class="b">EDUCATION QUALIFICATION</h2>
+         <table border="3">
+            <style>
+               table{
+                  background-color: rgb(0, 255, 145);
+               }
+            </style>   
+           <tr> 
+            <td>B.Tech IT</td>
+            <td>Kongu Engineering College</td>
+            <td>Anna university board</td>
+            <td>2022-2026</td>
+            <td>7.45*</td>
+           </tr> 
+           <tr>
+            <td>HSC</td>
+            <td>Karur Saraswathi Vidhyalaya</td>
+            <td>State board</td>
+            <td>2022</td>
+            <td>86.16%</td>
+           </tr>
+           <tr>
+            <td>SSLC</td>
+            <td>Karur saraswathi vidhyalaya</td>
+            <td>State board</td>
+            <td>2020</td>
+            <td>90.5%</td>
+           </tr>
+         </table>
+         <h2 class="c">PAPER PRESENTATION</h2>
+         <style>
+         ul{
+            background-color:rgb(139, 43, 139);
+            padding:20px;
+
+         }
+         ul{
+            list-style: square;
+         }
+         </style>
+         
+            <ul>
+
+            <li>paper presented on Blockchain technology at Kongu Engineering College.</li>
+            <li>paper presented on Exodia-Blockchain technolgy at Kongu Engineering College.</li>
+            <li>paper presented on AI in games at Anna University regional campus.</li>
+            <li>paper presented on Low code and no code in AI at Coimbatore Institute of technolgy.</li>
+         </ul> 
+         
+         <h2 class="d">WORKSHOP ATTENDED</h2>
+          <P>Attended on Digital fabrication workshop at Anna University reg campus.</P>
+         <h2 class="e">AWARDS</h2>
+         
+      
+            <ul class="a">
+               
+               <li>First price for hackathon project on Temperature sensor monitoring at Kongu Engineering College.</li>
+
+            </ul>
+            <h2 class="f">RESPONSIBILITIES</h2>
+            <ul class="b">
+               <li>Member of the cloud computing</li>
+               <li>Member of the ISTE club</li>
+            </ul>
+            <h2 class="g">EXTRA CURRICULAR</h2>
+            <ul class="c">
+               <li>participated Enthusia for dance event</li>
+               <li>participated treasure hunt event for got third price</li>
+               <li>participated Enthusia for fashion designing</li>
+            </ul>
+            <h2 class="h">SKILLS</h2>
+            <p><h3>TECHNICAL:</h3></p>
+            <ol class="a">
+               <li>C</li>
+               <li>C++</li>
+               <li>Java</li>
+               <li>Python</li>
+               <li>HTML</li>
+            </ol>
+            <p><h3>NON TECHNICAL:</h3></p>
+            <ol class="a">
+               <li>communication</li>
+               <li>Leadership Quality</li>
+            </ol>
+            <h2 class="i">PERSONAL PROFILE</h2>
+            <div class="a">
+            <p>FATHER         :    A.SUBRAMANIYAN</p>
+            <p>MOTHER         :    N.SATHIYAVANIMUTHU</p>
+            <p>D.O.B          :    31.05.2005</p>
+            <p>NATIONALITY    :    INDIAN</p>
+            <p>LANGUAGES KNOWN:    TAMIL,ENGLISH</p>
+            <p>HOBBIES:</p>
+            <ul class="e">
+               <li>Hearing the music</li>
+               <li>Playing games</li>
+               <li>Watching movies</li>
+            </ul>
+            <p>AREA OF INTEREST:</p>
+            <ul class="e">
+               <li>App development</li>
+               <li>Game development</li>
+            </ul>
+            </div>
+            
+
+         
+      </div>
+
+   
+
+   </body>
+</html>   
+    
+

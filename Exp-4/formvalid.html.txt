@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validation Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(47, 171, 150);
+  }
+  .form-box {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .error {
+    color: red;
+  }
+  .success {
+    color: green;
+  }
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    margin: auto; /* Center align the input groups */
+   
+  }
+  .input-group label {
+    display:inline-flex;
+    align-items: center;
+    width: 150px;
+    text-align: left;
+    margin-right: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="form-box">
+    <h1>Student Registration Form</h1>
+    <form id="studentregistrationForm" onsubmit="return validateForm()">
+      
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <span id="nameError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" placeholder="Enter your roll number" required>
+        <span id="rollNoError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+        <span id="genderError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label>Programming Languages Known:</label>
+        <label><input type="checkbox" name="languages" value="C"> C</label>
+        <label><input type="checkbox" name="languages" value="C++"> C++</label>
+        <label><input type="checkbox" name="languages" value="Java"> Java</label>
+        <label><input type="checkbox" name="languages" value="Python"> Python</label>
+        <span id="languagesError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="interests">Area of Interest:</label>
+        <select id="interests" name="interests" required>
+          <option value="">Select interests</option>
+          <option value="DBMS">DBMS</option>
+          <option value="WEB TECHNOLOGY">WEB TECHNOLOGY</option>
+          <option value="OPERATING SYSTEM">OPERATING SYSTEM</option>
+          <option value="DATA STRUCTURE">DATA STRUCTURE</option>
+        </select>
+        <span id="interestsError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="district">District:</label>
+        <select id="district" name="district" required>
+          <option value="">Select District</option>
+          <option value="Erode">Erode</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Tirupur">Tirupur</option>
+          <option value="Karur">Karur</option>
+          <option value="Salem">Salem</option>
+          <option value="Nammakal">Nammakal</option>
+        </select>
+        <span id="districtError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address"></textarea><br>
+        <span id="addressError" class="error"></span>
+      </div>
+      
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <span id="emailError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <span id="phoneError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <span id="usernameError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <span id="passwordError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+        <span id="confirmPasswordError" class="error"></span>
+      </div><br>
+      
+      <div class="input-group">
+        <input type="submit" value="Register">
+        <div id="successMessage" class="success"></div>
+        <div id="errorMessage" class="error"></div>
+      </div><br>
+      
+    </form>
+  </div>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var rollNo = document.getElementById('rollNo').value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var languages = document.querySelectorAll('input[name="languages"]:checked');
+      var interests = document.getElementById('interests').value;
+      var district = document.getElementById('district').value;
+      var address = document.getElementById('address').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      var nameError = document.getElementById('nameError');
+      var rollNoError = document.getElementById('rollNoError');
+      var genderError = document.getElementById('genderError');
+      var languagesError = document.getElementById('languagesError');
+      var interestsError = document.getElementById('interestsError');
+      var districtError = document.getElementById('districtError');
+      var addressError = document.getElementById('addressError');
+      var emailError = document.getElementById('emailError');
+      var phoneError = document.getElementById('phoneError');
+      var usernameError = document.getElementById('usernameError');
+      var passwordError = document.getElementById('passwordError');
+      var confirmPasswordError = document.getElementById('confirmPasswordError');
+      var successMessage = document.getElementById('successMessage');
+      var errorMessage = document.getElementById('errorMessage');
+
+      // Reset all error messages
+      nameError.textContent = '';
+      rollNoError.textContent = '';
+      genderError.textContent = '';
+      languagesError.textContent = '';
+      interestsError.textContent = '';
+      districtError.textContent = '';
+      addressError.textContent = '';
+      emailError.textContent = '';
+      phoneError.textContent = '';
+      usernameError.textContent = '';
+      passwordError.textContent = '';
+      confirmPasswordError.textContent = '';
+      errorMessage.textContent = '';
+      successMessage.textContent = '';
+
+      // Name validation
+      if (!/^[A-Za-z][A-Za-z\s]*$/.test(name)) {
+        nameError.textContent = 'Name must start with an alphabet and can contain only alphabets and spaces';
+        return false;
+      }
+
+      // Roll number validation
+      if (!/^\d{2}[A-Z]{3}\d{3}$/.test(rollNo)) {
+        rollNoError.textContent = 'Roll number must be 2 digits, 3 capital letters, and 3 digits long';
+        return false;
+      }
+
+      // Gender validation
+      if (!gender) {
+        genderError.textContent = 'Please select a gender';
+        return false;
+      }
+
+      // Languages validation
+      if (languages.length === 0) {
+        languagesError.textContent = 'Please select at least one programming language';
+        return false;
+      }
+
+      // Interests validation
+      if (interests === '') {
+        interestsError.textContent = 'Please select an area of interest';
+        return false;
+      }
+
+      // District validation
+      if (district === '') {
+        districtError.textContent = 'Please select a district';
+        return false;
+      }
+
+      // Address validation
+      if (address.trim() === '') {
+        addressError.textContent = 'Please enter your address';
+        return false;
+      }
+
+      // Email validation
+      if (!/^[\w.-]+@\w+\.\w{2,3}$/.test(email)) {
+    emailError.textContent = 'Please enter a valid email address';
+    return false;
+  }
+
+      // Phone number validation
+      if (!/^\d{10}$/.test(phone)) {
+  phoneError.textContent = 'Phone number must be 10 digits long';
+  return false;
+}
+
+      // Username validation
+      if (!/^[A-Za-z][A-Za-z0-9_]*[_][A-Za-z0-9_]*$/.test(username)) {
+            usernameError.textContent = '<----- Start with alphabet, contain only alphanumeric characters and atleast one underscore';
+            return false;
+        } 
+      // Password validation
+      if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/.test(password)) {
+    passwordError.textContent = 'Password must contain at least one digit, one lowercase letter, one uppercase letter, and be 8-12 characters long';
+    return false;
+  }
+  if (name && username && password && confirmPassword && (password === confirmPassword)) {
+        
+        errorMessage.textContent = '';
+
+        
+        successMessage.textContent = 'Successfully Registered!';
+
+        
+        setTimeout(function() {
+            document.getElementById('registrationForm').submit();
+        }, 3000); 
+
+        return false; 
+    } else {
+        errorMessage.textContent = 'Please fill in all fields correctly';
+        return false; 
+    }
+}
+
+  </script>
+</body>
+</html>
+
+

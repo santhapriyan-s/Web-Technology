@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Liow port" content="width=device-width,initial-scale=1.0">
+  <title> Realme mobile </title>
+  <link rel="stylesheet" href="style.css">
+  <link href = "https: //cdn.jsdeliver. het/npm / bookshapes.3.3/dist/css/ botstrap. min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+<div class="container - fluid">
+  <a class="navbar-brand" href="#"> REALME MOBILE</a>
+  <button class="navbar-toggler" type="button"data -bs-toggle="collapse" data-bs- target = "#navbar Supported content" aria- controls="navbarSupportedcontent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar- toggler-icon"> </span>
+</button>
+<div class="collapse navbar-collapse" id="navbar Supported content">
+<ul class="navbar-nav mx-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="#home"> Home </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#about">About</a>
+ <li class="nav-item">
+    <a dass="nav-link" href="#product"> product</a>
+ </li>
+ <li class="nav-item">
+    <a class="nav-link" href="# Contact"> contact </a>
+ </li>
+<button class="p2 my-lg-0 my-2 text-right">Sign In </button> 
+</div>
+</div>
+<Section id="product">
+ <div class="container m-5">
+   <h1 class="text-center my-55">OUR PRODUCTS</h1>
+   <div class="row">
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="c.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#"class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="d.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#"  class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="e.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="f.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="g.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="h.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="i.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="j.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="k.png.png" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title">card title</h5>
+                <a href="#" class="btn signin">Add To cart</a>
+            </div>
+        </div>
+    </div>
+   </div>
+ </div> 
+<script src="https://cdn. js delivr.net/ npm/@poppajs/Cac@2.11.8/dist /umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net /npml bootstrap@5.3.3/dist/ls/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

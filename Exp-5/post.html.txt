@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        /* Center the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="http://localhost:3000/submit" method="post"> <!-- Changed method to POST -->
+            <h1>Employee Details Form</h1>
+            <table>
+                <tr>
+                    <td><label for="name">Employee Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="empId">Employee ID:</label></td>
+                    <td><input type="text" id="empId" name="empId" required></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="branch">Branch:</label></td>
+                    <td>
+                        <select id="branch" name="branch" required>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Operations">Operations</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile Number:</label></td>
+                    <td><input type="text" id="mobile" name="mobile" required></td>
+                </tr>
+                <tr>
+                    <td><label for="branchAddress">Branch Address:</label></td>
+                    <td><textarea id="branchAddress" name="branchAddress" required></textarea></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+
